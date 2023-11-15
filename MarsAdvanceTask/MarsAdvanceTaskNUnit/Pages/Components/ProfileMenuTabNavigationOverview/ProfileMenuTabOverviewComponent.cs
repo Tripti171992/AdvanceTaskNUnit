@@ -34,35 +34,35 @@ namespace MarsAdvanceTaskNUnit.Pages.Components.ProfileMenuTabNavigationOverview
         public void ClickDashboardTab()
         {
             //------Click dashboard tab------
-            Wait.WaitToBeClickable(driver, "XPath", "//h1[text()='Notifications']", 5);
+            Wait.WaitToBeClickable(driver, "XPath", "//a[text()='Dashboard']", 5);
             RenderComponents();
             dashboardTab.Click();
         }
         public void ClickProfileTab()
         {
             //------Click profile tab------
-            Wait.WaitToBeClickable(driver, "XPath", "//h3[text()='Languages']", 5);
+            Wait.WaitToBeClickable(driver, "XPath", "//a[text()='Profile']", 5);
             RenderComponents();
             profileTab.Click();
         }
         public void ClickManageListingsTab()
         {
             //------Click manage listings tab------
-            Wait.WaitToBeClickable(driver, "XPath", "//h2[text()='Manage Listings']", 5);
+            Wait.WaitToBeClickable(driver, "XPath", "//a[text()='Manage Listings']", 5);
             RenderComponents();
             manageListingsTab.Click();
         }
         public void ClickReceivedRequestsTab()
         {
             //------Click received requests tab------
-            Wait.WaitToBeClickable(driver, "XPath", "//h2[text()='Received Requests']", 5);
+            Wait.WaitToBeClickable(driver, "XPath", "/a[text()='Received Requests']", 5);
             RenderComponents();
             receivedRequestsTab.Click();
         }
         public void ClickSentRequestsTab()
         {
             //------Click sent requests tab------
-            Wait.WaitToBeClickable(driver, "XPath", "//h2[text()='Sent Requests']", 5);
+            Wait.WaitToBeClickable(driver, "XPath", "//a[text()='Sent Requests']", 5);
             RenderComponents();
             sentRequestsTab.Click();
         }

@@ -253,10 +253,11 @@ namespace MarsAdvanceTaskNUnit.Tests
                 foreach (var skill in skillList)
                 {
                     ManageListingsComponentStepsObj.UpdateSkillDetails(skill);
+                    test.AddScreenCaptureFromPath(CommonMethods.SaveScreenshot(driver, "UpdateInvalidSkillDetails"), "Update invalid skill details successful");
                     AddShareSkillStepsObj.ValidateInvalidMessage();
                     HomePageStepsObj.ClickManageListingsTab();
                     ManageListingsComponentStepsObj.ValidateSkillNotUpdated(skill);
-                    test.AddScreenCaptureFromPath(CommonMethods.SaveScreenshot(driver, "UpdateInvalidSkillDetails"), "Update invalid skill details successful");
+                   
                 }
             }
             catch (Exception ex)

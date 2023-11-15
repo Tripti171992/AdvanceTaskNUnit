@@ -100,10 +100,10 @@ namespace MarsAdvanceTaskNUnit.Tests
                 {
                     HomePageStepsObj.ClickShareSkillButton();
                     AddShareSkillStepsObj.AddShareSkill(skill);
+                    test.AddScreenCaptureFromPath(CommonMethods.SaveScreenshot(driver, "AddInvalidShareSkill"), "Add invalid share skill successful");
                     AddShareSkillStepsObj.ValidateInvalidMessage();
                     HomePageStepsObj.ClickManageListingsTab();
-                    ManageListingsComponentStepsObj.ValidateShareSkillNotAdded(skill);
-                    test.AddScreenCaptureFromPath(CommonMethods.SaveScreenshot(driver, "AddInvalidShareSkill"), "Add invalid share skill successful");
+                    ManageListingsComponentStepsObj.ValidateShareSkillNotAdded(skill);                   
                 }
             }
             catch (Exception ex)
@@ -129,9 +129,9 @@ namespace MarsAdvanceTaskNUnit.Tests
                 {
                     HomePageStepsObj.ClickShareSkillButton();
                     AddShareSkillStepsObj.AddShareSkillWithPastEndDate(skill);
-                    HomePageStepsObj.ClickManageListingsTab();
-                    ManageListingsComponentStepsObj.ValidateShareSkillNotAdded(skill);
                     test.AddScreenCaptureFromPath(CommonMethods.SaveScreenshot(driver, "AddShareSkillWithPastEndDate"), "Add share skill with past end date successful");
+                    HomePageStepsObj.ClickManageListingsTab();
+                    ManageListingsComponentStepsObj.ValidateShareSkillNotAdded(skill);                   
                 }
             }
             catch (Exception ex)
